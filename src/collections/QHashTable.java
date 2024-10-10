@@ -16,8 +16,9 @@ public class QHashTable {
 		map.put(1, "Revanth");
 		map.put(2, "Vicky");
 		map.put(3, "Bakky");
-		map.put(4, null);
-		map.put(null, "Dembele");
+		map.put(11, "Bakky");
+		//map.put(4, null);
+		//map.put(null, "Dembele");
 		System.out.println(map);
 		System.out.println(map.get(1));
 		Set<Integer> keySet = map.keySet();

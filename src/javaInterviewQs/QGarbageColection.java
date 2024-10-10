@@ -8,8 +8,8 @@ public class QGarbageColection {
 		colection=null;
 		System.out.println("main method called 1");
 		//two ways
-		//System.gc();//first way
-		Runtime.getRuntime().gc();//second way
+		System.gc();//first way
+		//Runtime.getRuntime().gc();//second way
 		System.out.println("main method called 2");
 
 	}

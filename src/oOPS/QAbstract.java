@@ -1,6 +1,6 @@
 package oOPS;
 
-  abstract final class Bank{
+  abstract class Bank{
 	String holderName;
 	String branchName;
 	

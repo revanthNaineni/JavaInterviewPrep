@@ -24,15 +24,18 @@ class OC {
 			public static void iPLTeam() {
 				System.out.println("SRH");
 				//System.out.println(age);
+				System.out.println();
 			}
 			static class HeightmethodInnerInnerClass{
+				int speed4=40;
 				void method1() {
 					System.out.println("HeightmethodInnerInnerClass");
 					//System.out.println(type);
 					class Dembele{
+						//static size=0;
 						public int speed2=20;
 						 void dribbler() {
-							 speed2=speed2+20;
+							 speed2=speed4+20;
 							System.out.println("Ousmane Dembele"+speed2);
 
 						}
@@ -70,6 +73,7 @@ class OC {
 		}
 		public static void IC1Method2() {
 			System.out.println("Inside inner class static method");
+			//height();
 		}
 	}
 	
@@ -86,7 +90,7 @@ class OC {
 		
 		public static void offside() {
 			System.out.println("offside");
-			OC.EPLTeam();
+			EPLTeam();
 		}
 	}
 }

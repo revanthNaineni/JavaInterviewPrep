@@ -54,19 +54,19 @@ public class SerializationAndDeserialization {
 	public static void main(String[] args) throws IOException, ClassNotFoundException {
 		
 		
-		/*
-		 * Car car=new Car("2 stroke", 22);
-		 * 
-		 * //Car car=new Car("4 stroke", 33);
-		 * 
-		 * 
-		 * 
-		 * 
-		 * FileOutputStream fileOutputStream=new FileOutputStream("rev.txt");
-		 * ObjectOutputStream objectOutputStream=new
-		 * ObjectOutputStream(fileOutputStream); objectOutputStream.writeObject(car);
-		 * objectOutputStream.flush();
-		 */
+		
+		  //Car car=new Car("2 stroke", 22);
+		  
+		  Car car=new Car("4 stroke", 33);
+		  
+		  
+		  
+		  
+		  FileOutputStream fileOutputStream=new FileOutputStream("rev.txt");
+		  ObjectOutputStream objectOutputStream=new
+		  ObjectOutputStream(fileOutputStream); objectOutputStream.writeObject(car);
+		  objectOutputStream.flush();
+		 
 				 
 				 
 			 

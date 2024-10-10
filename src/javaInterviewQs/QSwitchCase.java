@@ -3,7 +3,7 @@ package javaInterviewQs;
 public class QSwitchCase {
 
 	public static void main(String[] args) {
-		int a=16;
+		int a=10;
 		 switch (a) {
 		case 10:
 			System.out.println("11");

@@ -1,6 +1,7 @@
 package exceptions;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 class Handler1 {
 	public void getAge() throws IOException,ArithmeticException{
@@ -10,7 +11,7 @@ class Handler1 {
 
 class Handler2 extends Handler1{
 	@Override
-	public void getAge() throws IllegalArgumentException {
+	public void getAge() throws IOException {
 		// TODO Auto-generated method stub
 		//super.getAge();
 	}

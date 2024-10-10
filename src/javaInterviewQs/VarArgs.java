@@ -22,6 +22,7 @@ public class VarArgs {
 		Integer arr[]= {20,05,88,911};
 		args2.getLength(33,22,36);
 		args2.getLength(arr);
+		args2.getLength(1,2,3,4,5,6,7,8,9);
 		args2.getSomething(10, "Dembele","Mbappe","Asensio");
 
 	}

@@ -17,6 +17,7 @@ public class QHashSet {
 		set.add(null);
 		set.add(null);
 		set.remove(3);
+		set.
 		System.out.println(set);
 		Iterator<Integer> iterator = set.iterator();
 		while (iterator.hasNext()) {

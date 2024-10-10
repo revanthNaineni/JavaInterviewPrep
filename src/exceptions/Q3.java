@@ -2,7 +2,7 @@ package exceptions;
 
 public class Q3 {
 
-	@SuppressWarnings("finally")
+	//@SuppressWarnings("finally")
 	public static void main(String[] args) {
 
 			try {

@@ -1,6 +1,17 @@
 package initializationBlocks;
 
 class SuperBlocks{
+	static {
+		System.out.println("Super class first static block called");
+	}
+	
+	static {
+		System.out.println("Super class second static block called");
+	}
+	
+	{
+		System.out.println("Super class non static block called");
+	}
 	public SuperBlocks() {
 		System.out.println("Super Default constructor called");
 	}
@@ -28,8 +39,8 @@ class Blocks extends SuperBlocks{
 	
 	static {
 		System.out.println("Third static block is called");
-		Blocks blocks2=new Blocks();
-		blocks2.age=26;
+		//Blocks blocks2=new Blocks();
+		//blocks2.age=26;
 	}
 	
 	{

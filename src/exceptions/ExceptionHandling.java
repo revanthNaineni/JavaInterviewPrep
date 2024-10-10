@@ -17,7 +17,7 @@ public class ExceptionHandling {
 			int c=a/b;
 			System.out.println(c);
 			
-		} catch (ArithmeticException | ArrayIndexOutOfBoundsException e ) {
+		} catch (ArithmeticException | ArrayIndexOutOfBoundsException  e ) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 			//System.exit(0);
