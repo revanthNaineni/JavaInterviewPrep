@@ -11,5 +11,10 @@ public class ParallelStreamExample {
         .forEachOrdered(number -> {
                     System.out.println(Thread.currentThread().getName() + " processing " + number);
                 });
+        
+        numbers.parallelStream().sorted()
+        .forEach(number -> {
+                    System.out.println(Thread.currentThread().getName() + " processing " + number);
+                });
     }
 }

@@ -16,6 +16,7 @@ public class ReverseANumber {
 		int num=Integer.valueOf(str);
 		System.out.println(num);
 		
+		
 		//2nd way
 		int n2=689;
 		int revNo=0;
@@ -24,6 +25,7 @@ public class ReverseANumber {
 			n2=n2/10;
 			
 		}
+		
 		
 		System.out.println(revNo);
 		

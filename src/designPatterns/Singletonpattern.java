@@ -1,26 +1,49 @@
 package designPatterns;
 
-public class Singletonpattern {
-	private static Singletonpattern singletonpattern;
+import java.io.Serializable;
 
-	private Singletonpattern() {
+public class Singletonpattern implements Serializable, Cloneable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private static volatile Singletonpattern singletonpattern;
 
+	
+	//To avoid breaking Singleton from Reflection
+	private Singletonpattern() throws Exception {
+		if(singletonpattern!=null) {
+			throw new RuntimeException("Instance already created. Use getInstance()");
+		}
 	}
 
-	public static Singletonpattern getInstance() {
+	public static Singletonpattern getInstance() throws Exception {
 		if (singletonpattern == null) {
-			singletonpattern = new Singletonpattern();
-			System.out.println("New object is created");
-		}else {
-			System.out.println("Object is reused");
-		}
+            synchronized (Singletonpattern.class) {
+                if (singletonpattern == null) {
+                	singletonpattern = new Singletonpattern();
+                }
+            }
+        }
+
 		return singletonpattern;
 	}
+	
+	//To avoid breaking Singleton while Cloning
+	@Override
+    protected Object clone() throws CloneNotSupportedException {
+        return singletonpattern;
+    }
+	
+	//To avoid breaking Singleton while Deserialization
+	protected Object readResolve() {
+		return singletonpattern;
+	}	 
 
 }
 
  class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         // Get the instance of Singleton
         Singletonpattern singletonInstance1 = Singletonpattern.getInstance();
         Singletonpattern singletonInstance2 = Singletonpattern.getInstance();

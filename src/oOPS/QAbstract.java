@@ -30,6 +30,10 @@ class SBI extends Bank{
 		System.out.println("SBI constructor");
  
 	}
+	
+	public void test() {
+		System.out.println("test2");
+	}
 
 	@Override
 	protected void interestRate() {

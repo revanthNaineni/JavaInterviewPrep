@@ -23,11 +23,17 @@ class C1 implements I1,I2{
 
 	//If test method is not implemented in C1 ,we will get compilation error.This is called Diamond
 	//problem.We fix this problem by implementing interfaces test() method
+	
+	//Reason: If we invoke test() method using implementation class's object, compiler will be confused , 
+	//  that it is not sure which method's implementation will it triggers. So its mandatory to
+	// override test() in implementation class and provide its own implementation or invoke Interface's 
+	// implementation using interface name and super keyword. Ex:I1.super.test();
+	
 	@Override
-	public void test() {
-		// TODO Auto-generated method stub
+	public void test() { // TODO Auto-generated method stub
 		I1.super.test();
 	}
+	 
 	
 }
 

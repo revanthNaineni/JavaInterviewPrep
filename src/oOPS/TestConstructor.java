@@ -11,6 +11,8 @@ public class TestConstructor {
 		TestConstructor constructor=new TestConstructor("Dembele");
 		constructor.i=20;
 		System.out.println(constructor.i);
+		System.out.println((int)Character.MIN_VALUE);
+		System.out.println((int)Character.MAX_VALUE);
 
 	}
 

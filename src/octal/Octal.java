@@ -43,8 +43,10 @@ public class Octal {
 		System.out.println(01.2);
 		System.out.println(01.8);
 		System.out.println(088888.2);
-		System.out.println(075);
-		System.out.println(01234);
+		System.out.println(071);
+		System.out.println(079);
+		System.out.println(07123458);
+		System.out.println(01234T);
 		
 		System.out.println(012 + 3); // Output: 13 (Octal 012 + Decimal 3)
 		System.out.println(012 - 3);
@@ -65,6 +67,9 @@ public class Octal {
 		
 		System.out.println("New\nLine"); // Output: New (on a new line) Line
 		System.out.println("\012New Line");
+		
+		System.out.println(8);
+		System.out.println(9);
 	}
 
 }

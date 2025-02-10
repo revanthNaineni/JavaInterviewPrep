@@ -1,6 +1,7 @@
 package records;
 
 record Test1(int age, double height) {
+	
 		
 }
 

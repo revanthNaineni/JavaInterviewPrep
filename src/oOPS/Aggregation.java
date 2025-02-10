@@ -3,56 +3,97 @@ package oOPS;
 import java.util.ArrayList;
 import java.util.List;
 
-class Department{
-	
-	public String dept_name;
-	public List<Employee> employee;
-	
-	public Department(String dept_name, List<Employee> employee) {
-		this.dept_name = dept_name;
-		this.employee = employee;
+interface Window{
+	void render();
+}
+
+class WindowsWindow implements Window{
+
+	@Override
+	public void render() {
+		System.out.println("Windows window rendering");
+		
 	}
-	
-	
 	
 }
 
-class Employee{
-	public String name;
-	public int age;
+class MacWindow implements Window{
+
+	@Override
+	public void render() {
+		System.out.println("Mac window rendering");
+	}
 	
-	public Employee(String name, int age) {
-		super();
-		this.name = name;
-		this.age = age;
+}
+
+interface Button{
+	void click();
+}
+
+class WindowsButton implements Button{
+
+	@Override
+	public void click() {
+		System.out.println("WindowsButton clicked");
+	}
+	
+}
+
+class MacButton implements Button{
+
+	@Override
+	public void click() {
+		System.out.println("MacButton clicked");
+	}
+	
+}
+
+interface Factory{
+	Window windowsInstance();
+	Button buttonInstance();
+}
+
+class WindowsFactory implements Factory{
+
+	@Override
+	public Window windowsInstance() {
+		// TODO Auto-generated method stub
+		return new WindowsWindow();
 	}
 
 	@Override
-	public String toString() {
-		return "Employee [name=" + name + ", age=" + age + "]";
+	public Button buttonInstance() {
+		// TODO Auto-generated method stub
+		return new WindowsButton();
 	}
 	
-	
+}
+
+class ButtonFactory implements Factory{
+
+	@Override
+	public Window windowsInstance() {
+		// TODO Auto-generated method stub
+		return new MacWindow();
+	}
+
+	@Override
+	public Button buttonInstance() {
+		// TODO Auto-generated method stub
+		return new MacButton();
+	}
 	
 }
+
+
 
 public class Aggregation {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
-		Employee employee1= new Employee("Revanth", 26);
-		Employee employee2= new Employee("Dembele", 26);
-		
-		List<Employee> employees=new ArrayList<>();
-		employees.add(employee1);
-		employees.add(employee2);
-		
-		Department department= new Department("IT", employees);
-		Employee employee = department.employee.get(1);
-		System.out.println(department.dept_name+ ":"+employee);
-		
-
+		Factory windowsFactory = new WindowsFactory();
+		Window windowsInstance = windowsFactory.windowsInstance();
+		windowsInstance.render();
+		Button buttonInstance = windowsFactory.buttonInstance();
 	}
 
 }

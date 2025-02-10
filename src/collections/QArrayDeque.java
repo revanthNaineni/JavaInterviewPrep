@@ -23,7 +23,6 @@ public class QArrayDeque {
 		arrayDeque.poll();
 		System.out.println(arrayDeque);
 		
-		
 		  Deque<Integer> arrayDeque1=new ArrayDeque<>(3); 
 		  arrayDeque1.add(33);
 		  arrayDeque1.add(7);

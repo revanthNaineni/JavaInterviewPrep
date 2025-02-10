@@ -14,6 +14,10 @@ class SBlock {
 	public SBlock(String msg) {
 		this();
 	}
+	
+	private SBlock(String msg, int age) {
+		this();
+	}
 
 	static {
 		System.out.println("Static block called");
@@ -26,8 +30,8 @@ class SBlock {
 		System.out.println("Private Test method called");
 	}
 	
-	private static void test2(int age) {
-		System.out.println("Private Test2 method called with parameter "+ age);
+	private static void test2(int age, int height) {
+		System.out.println("Private Test2 method called with parameters "+ age +" and "+ height );
 	}
 }
 public class ReflectionAPIandStaticBlocks {
@@ -68,9 +72,9 @@ public class ReflectionAPIandStaticBlocks {
 		declaredMethod.setAccessible(true);
 		declaredMethod.invoke(sb);
 		
-		Method declaredMethod2 = sblock.getDeclaredMethod("test2", int.class);
+		Method declaredMethod2 = sblock.getDeclaredMethod("test2", int.class, int.class);
 		declaredMethod2.setAccessible(true);
-		declaredMethod2.invoke(sb,30);
+		declaredMethod2.invoke(sb,30,10);
 		
 
 		

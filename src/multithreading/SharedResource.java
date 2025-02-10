@@ -14,6 +14,9 @@ public class SharedResource {
 			}
 		}
 
+	}
+
+	public synchronized void usingResource(String threadName) {
 		System.out.println(threadName + " is using the resource.");
 		isResourceAvailable = false;
 

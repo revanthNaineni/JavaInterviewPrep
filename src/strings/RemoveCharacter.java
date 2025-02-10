@@ -10,6 +10,6 @@ public class RemoveCharacter {
 		System.out.println("String after removing First 'e' = " + str.replaceFirst("e", ""));
 
 		// remove all occurrences of the specified character.
-		System.out.println("String after replacing all small letters = " + str.replaceAll("([A-Z])", ""));
+		System.out.println("String after replacing all Capital letters = " + str.replaceAll("([A-Z])", ""));
 	}
 }

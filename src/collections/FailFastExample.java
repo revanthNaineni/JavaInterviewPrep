@@ -13,11 +13,10 @@ public class FailFastExample {
         Iterator<String> iterator = list.iterator();
 
 		
-		while (iterator.hasNext()) {
-			String element = iterator.next();
-			System.out.println(element);
-			list.add("orange");
-		}
+		/*
+		 * while (iterator.hasNext()) { String element = iterator.next();
+		 * System.out.println(element); list.add("orange"); }
+		 */
 		 
         
         while (iterator.hasNext()) {

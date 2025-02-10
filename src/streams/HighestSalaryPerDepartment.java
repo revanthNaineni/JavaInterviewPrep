@@ -19,11 +19,8 @@ public class HighestSalaryPerDepartment {
         );
 
         // Group employees by department and find the employee with the highest salary in each group
-       Map<String, Employee> collect = employees.stream()
-       .collect(Collectors.groupingBy(s->s.getDepartment(),Collectors.collectingAndThen(
-               Collectors.maxBy(Comparator.comparingInt(Employee::getSalary)),
-               Optional::get
-       )));
+       Map<Object, Optional<Employee>> collect = employees.stream()
+       .collect(Collectors.groupingBy(s->s.getDepartment(),Collectors.maxBy(Comparator.comparingInt(Employee::getSalary))));
        
        System.out.println(collect);
     }
@@ -32,7 +29,7 @@ public class HighestSalaryPerDepartment {
 class Employee {
     private String name;
     private String department;
-    private int salary;
+    private int salary; 
     
     
 	public Employee(String name, String department, int salary) {

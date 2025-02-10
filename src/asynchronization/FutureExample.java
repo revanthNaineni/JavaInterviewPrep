@@ -30,7 +30,8 @@ public class FutureExample {
             System.out.println("Test6");
             return "Result from Task 3";
         };
-
+        
+        
         // Submit tasks to the executor and get Futures
         Future<String> future1 = executor.submit(task1);
         Future<String> future2 = executor.submit(task2);

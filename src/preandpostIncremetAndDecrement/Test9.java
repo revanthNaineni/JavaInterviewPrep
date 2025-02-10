@@ -7,8 +7,7 @@ public class Test9 {
 			int b = ++a + a-- - --a;
 			System.out.println("a: " + a + ", b: " + b);
 
-			//6+6-4=8
-			//4
+			
 	}
 
 }

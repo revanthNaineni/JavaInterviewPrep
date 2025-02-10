@@ -9,6 +9,7 @@ public class BoxedInStreams {
 		int[] numbers = {5, 2, 8, 1, 6,6};
 		Stream<Integer> boxed = Arrays.stream(numbers)
 		.boxed();
+		
 	}
 
 }

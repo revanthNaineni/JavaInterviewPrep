@@ -4,7 +4,7 @@ public class Tricky9 {
 	static int x=1111;  
 	static  
 	{  
-	x=x-- - --x;   
+	x=x-- - --x;  //1111-1109 
 	}  
 	{  
 	x=x++ + ++x;  

@@ -30,5 +30,6 @@ public class PrototypeDesignPattern {
 
 		System.out.println("Original: " + prototype.getValue());
 		System.out.println("Copy: " + copy.getValue());
+		System.out.println(prototype==copy);
 	}
 }

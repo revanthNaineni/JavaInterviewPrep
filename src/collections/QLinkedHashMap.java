@@ -7,7 +7,7 @@ import java.util.Map;
 public class QLinkedHashMap {
 
 	public static void main(String[] args) {
-		Map<String, Integer> map=new LinkedHashMap<>();
+		LinkedHashMap<String, Integer> map=new LinkedHashMap<>();
 		map.put("pp", -22);
 		map.put("revanth", 111);
 		map.put("Dembele", 7);
@@ -45,6 +45,8 @@ public class QLinkedHashMap {
 		
 		
 		System.out.println(map);
+		
+		System.out.println(map.get("Gavi"));
 		
 	}
 

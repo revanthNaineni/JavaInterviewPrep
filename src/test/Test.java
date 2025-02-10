@@ -24,23 +24,6 @@ import java.util.Map;
 	}
 	 
 	 
-	 public static void main(String[] args) {
-		Test<Integer, Integer> test=new Test<Integer, Integer>(3);
-		test.put(1, 1);
-		test.put(2, 2);
-		test.put(3, 3);
-		
-		System.out.println(test);
-		
-		test.get(1);
-		
-		System.out.println(test);
-		
-		test.put(4, 4);
-		
-		System.out.println(test);
-		
-		
-	}
+	 public static void main(String[] args) {System.out.println(1^2^2^4^1^2^3^4);}
 	 
  }

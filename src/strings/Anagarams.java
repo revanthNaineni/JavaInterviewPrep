@@ -8,8 +8,8 @@ public class Anagarams {
 		
 		System.out.println(Anagarams.class.getClassLoader());
 		
-		String s1="Robed";
-		String s2="Bored";
+		String s1="Robed Test ";
+		String s2="Bored Test ";
 		isAnagrams(s1, s2);
 		
 	}

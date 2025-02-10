@@ -1,55 +1,47 @@
 package designPatterns;
 // Subject interface
-interface Image {
-    void display();
+interface DataAccess {
+    void accessData();
 }
 
-// Real Subject
-class RealImage implements Image {
-    private final String filename;
-
-    public RealImage(String filename) {
-        this.filename = filename;
-        loadFromDisk();
-    }
-
-    private void loadFromDisk() {
-        System.out.println("Loading image: " + filename);
-    }
-
+class RealDataAccess implements DataAccess {
     @Override
-    public void display() {
-        System.out.println("Displaying image: " + filename);
+    public void accessData() {
+        System.out.println("Accessing sensitive data...");
     }
 }
 
-// Proxy
-class ProxyImage implements Image {
-    private final String filename;
-    private RealImage realImage;
+class DataAccessProxy implements DataAccess {
+    
 
-    public ProxyImage(String filename) {
-        this.filename = filename;
+	private RealDataAccess realDataAccess;
+    private String userRole;
+
+    public DataAccessProxy(String userRole) {
+        this.userRole = userRole;
+        realDataAccess = new RealDataAccess();
     }
+    
+    
 
     @Override
-    public void display() {
-        if (realImage == null) {
-            realImage = new RealImage(filename);
+    public void accessData() {
+        if (userRole.equals("Admin")) {
+            realDataAccess.accessData();
+        } else {
+            System.out.println("Access Denied: You don't have the necessary permissions.");
         }
-        realImage.display();
     }
 }
+
 
 // Client
 public class ProxyDesignPattern {
-    public static void main(String[] args) {
-        Image image = new ProxyImage("sample.jpg");
+    public static void main(String[] args) { 
+    	DataAccess dataAccess = new DataAccessProxy("Admin");
+    dataAccess.accessData();  // Allowed
 
-        // Image will be loaded only when display() is called
-        image.display();
-
-        // Image will not be loaded again
-        image.display();
-    }
+    DataAccess dataAccessUser = new DataAccessProxy("User");
+    dataAccessUser.accessData();  // Denied
+}
 }

@@ -9,8 +9,8 @@ public class QBreakWithLabels {
 			inner:  //Label
 			for (int j = 0; j < 9; j++) {
 				
-			  if (i == 5) {
-			    break outer;
+			  if (j == 5) {
+			    break inner;
 			  }
 			  System.out.println("inner "+j);  // Prints numbers from 0 to 4
 			}

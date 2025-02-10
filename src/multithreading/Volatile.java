@@ -1,7 +1,7 @@
 package multithreading;
 
 class SharedResource1 {
-    private volatile boolean flag = false;
+    private boolean flag = false;
 
     public void setFlagTrue() {
         flag = true;

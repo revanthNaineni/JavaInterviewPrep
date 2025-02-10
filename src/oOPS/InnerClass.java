@@ -35,6 +35,7 @@ class OC {
 						//static size=0;
 						public int speed2=20;
 						 void dribbler() {
+							 speed4=60;
 							 speed2=speed4+20;
 							System.out.println("Ousmane Dembele"+speed2);
 
@@ -58,7 +59,7 @@ class OC {
 	
 	}
 
-	class IC1 {
+	 class IC1 {
 		
 		public IC1(){
 			System.out.println("Inner class IC1 constructor called");

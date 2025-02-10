@@ -7,7 +7,7 @@ public class Question2 {
 	 
 	public static void someMethod(String s) {
 	try {
-	throw new Exception();
+	throw new ArrayIndexOutOfBoundsException();
 	} finally {
 	throw new NullPointerException();
 	//System.out.println("Revanth");

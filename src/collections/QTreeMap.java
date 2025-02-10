@@ -1,6 +1,8 @@
 package collections;
 
+import java.util.Collections;
 import java.util.Comparator;
+import java.util.Map;
 import java.util.Map.Entry;
 import java.util.TreeMap;
 
@@ -57,6 +59,9 @@ public class QTreeMap {
 		System.out.println(map.subMap(2, 4));
 		System.out.println(map.tailMap(4));
 		
+		Collections.synchronizedMap(map);
+		Map<Integer, String> unmodifiableMap = Collections.unmodifiableMap(map);
+		unmodifiableMap.put(25, "Vicky");
 	}
 
 }

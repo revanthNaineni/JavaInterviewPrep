@@ -29,6 +29,9 @@ public class QpriorityQueue {
 		queue.add("hello22");
 		//queue.add(null);
 		queue.offer("Dembele");
+		queue.add("apple");
+		queue.offer("Dembele2");
+
 		
 		System.out.println(queue);
 		queue.remove();

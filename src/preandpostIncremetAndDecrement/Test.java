@@ -4,5 +4,6 @@ public class Test {
 		int a = 10;
 		int c = a++ + ++a;
 		System.out.println(c);
+		System.out.println(a);
 	}
 }

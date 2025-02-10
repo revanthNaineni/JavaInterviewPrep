@@ -8,7 +8,7 @@ interface AZ {
 
 interface BZ extends AZ {
     default void foo() {
-        System.out.println("B's foo");
+        AZ.super.foo();
     }
 }
 
